@@ -1,0 +1,65 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.lee</groupId>
+        <artifactId>base</artifactId>
+        <version>1.0.0</version>
+        <relativePath/>
+    </parent>
+    
+    <groupId>com.lee.workspace</groupId>
+    <artifactId>ldewst</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <name>Local Development Environment Workspace Setup Toolkit</name>
+    <description>
+        <![CDATA[
+            <b>LDEWST</b>(Local Development Environment Workspace Setup Toolkit)<br>
+            This project will setup your local developent environment will some scripts.<br>
+            Including Tomcat, Weblogic, Jrebel, Sencha EXT, Bootstrap and so on.
+        ]]>
+    </description>
+    
+    <properties>
+        <maven-assembly-plugin.version>2.6</maven-assembly-plugin.version>
+        <encoding>UTF-8</encoding>
+    </properties>
+
+    <build>
+        <finalName>workspace</finalName>
+        <!-- plugins -->
+        <plugins>
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <version>${maven-assembly-plugin.version}</version>
+                <configuration>
+                    <descriptors>
+                        <descriptor>src/main/assembly/package.xml</descriptor>
+                    </descriptors>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <repositories>
+        <repository>
+            <id>lee-git-repo</id>
+            <name>Jimmybly Lee's personal Github Repository</name>
+            <url>https://raw.githubusercontent.com/jimmyblylee/maven-repo/master/</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+                <checksumPolicy>warn</checksumPolicy>
+            </releases>
+            <snapshots>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+                <checksumPolicy>warn</checksumPolicy>
+            </snapshots>
+            <layout>default</layout>
+        </repository>
+    </repositories>
+</project>
