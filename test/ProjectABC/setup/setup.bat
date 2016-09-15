@@ -17,7 +17,7 @@ echo %BASE_HOME%
 set ARIA=%BASE_HOME%\setup\win\get\aria2c.exe -c -x 16 -j 10 -s 10
 set ZIP=%BASE_HOME%\setup\win\7z\7z.exe
 
-set PACKAGE=workspace-package.zip
+set PACKAGE=workspace-tomcat-package.zip
 
 set PACKAGE_URL=https://raw.githubusercontent.com/jimmyblylee/workspace/tree/master/dist/%PACKAGE%
 
