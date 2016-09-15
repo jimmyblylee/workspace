@@ -29,6 +29,11 @@ if not exist %TOMCAT_HOME%\bin (
         %ZIP% x -o. %WORKSPACE_HOME%\files\download\%TOMCAT_ZIP% >NUL
         rename %TOMCAT_NAME% tomcat
     popd
+    rmdir /S /Q %TOMCAT_NAME%\webapps\docs
+    rmdir /S /Q %TOMCAT_NAME%\webapps\examples
+    rmdir /S /Q %TOMCAT_NAME%\webapps\host-manager
+    rmdir /S /Q %TOMCAT_NAME%\webapps\manager
+    rmdir /S /Q %TOMCAT_NAME%\webapps\ROOT
     if exist %WORKSPACE_HOME%\common\tomcat (
         xcopy /Y /e /h %WORKSPACE_HOME%\common\tomcat %TOMCAT_HOME% >NUL 2>NUL
     )
