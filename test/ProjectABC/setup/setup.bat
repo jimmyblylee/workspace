@@ -19,7 +19,7 @@ set ZIP=%BASE_HOME%\setup\win\7z\7z.exe
 
 set PACKAGE=workspace-tomcat-package.zip
 
-set PACKAGE_URL=https://raw.githubusercontent.com/jimmyblylee/workspace/tree/master/dist/%PACKAGE%
+set PACKAGE_URL=https://raw.githubusercontent.com/jimmyblylee/workspace/master/dist/%PACKAGE%
 
 set TEMP=%BASE_HOME%\setup\temp
 
