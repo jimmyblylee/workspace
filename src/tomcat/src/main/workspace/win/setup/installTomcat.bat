@@ -20,7 +20,7 @@ set WORKSPACE_HOME=%PROJECT_HOME%\workspace
 set ZIP=%WORKSPACE_HOME%\win\7z\7z.exe
 
 set TOMCAT_HOME=%WORKSPACE_HOME%\run\tomcat
-set TOMCAT_NAME=apache-tomcat-9.0.0.M10
+set TOMCAT_NAME=apache-tomcat-8.5.5
 set TOMCAT_ZIP=%TOMCAT_NAME%-windows-x64.zip
 
 %info% "[INFO] Installing Tomcat." & echo.

@@ -25,13 +25,11 @@ if not exist %JREBEL_HOME%\jrebel.jar (
     mkdir %JREBEL_HOME% >NUL 2>NUL
     pushd %WORKSPACE_HOME%\run\
         %info% "[INFO] Unziping the zip file of jrebel..." & echo.
-        %ZIP% x -o. %WORKSPACE_HOME%\files\download\jrebel-6.2.3-nosetup.zip >NUL
-        %ZIP% x -ocrack %WORKSPACE_HOME%\files\download\jrebel_6.2.3_crack.zip >NUL
+        %ZIP% x -o. %WORKSPACE_HOME%\files\download\jrebel-6.4.7-nosetup.zip >NUL
+        %ZIP% x -ocrack %WORKSPACE_HOME%\files\download\jrebel-6.4.7-crack.zip >NUL
     popd
-    move %JREBEL_HOME%\jrebel.jar %JREBEL_HOME%\jrebel_bak.jar >NUL
     move %JREBEL_HOME%\lib\jrebel.jar %JREBEL_HOME%\lib\jrebel_bak.jar >NUL
-    move %WORKSPACE_HOME%\run\crack\jrebel\jrebel.jar %JREBEL_HOME%\jrebel.jar >NUL
-    move %WORKSPACE_HOME%\run\crack\jrebel6\jrebel.jar %JREBEL_HOME%\lib\jrebel.jar >NUL
-    move %WORKSPACE_HOME%\run\crack\jrebel.lic %JREBEL_HOME%\jrebel.lic >NUL
+    move %WORKSPACE_HOME%\run\crack\jrebel\lib\jrebel.jar %JREBEL_HOME%\lib\jrebel.jar >NUL
+    move %WORKSPACE_HOME%\run\crack\jrebel\jrebel.lic %JREBEL_HOME%\jrebel.lic >NUL
     rmdir /S /Q %WORKSPACE_HOME%\run\crack >NUL 2>NUL
 )
